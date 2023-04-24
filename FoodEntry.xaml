@@ -1,0 +1,24 @@
+﻿<Window x:Class="FoodCalendar.FoodEntryWindow"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   Title="Action Selection Window" Height="300" Width="400">
+    <StackPanel>
+        <TextBlock Text="Select an action for today:" Margin="10"/>
+        <StackPanel Orientation="Horizontal">
+            <RadioButton Click="EatClick" x:Name="eatRadioButton" Content="Eat" Margin="10" />
+            <Image Width="32" Height="32" Source="food.png"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <RadioButton Click="ButtonBase.Click" x:Name="drinkRadioButton" Content="Drink" Margin="10" />  
+            <Image Width="32" Height="32" Source="Drink.png"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <RadioButton Click="ButtonBase.Click" x:Name="exerciseRadioButton" Content="Exercise" Margin="10" />
+            <Image Width="32" Height="32" Source="exercise.png"/>
+        </StackPanel>
+        <Button Content="Save" x:Name="saveButton" Click="saveButton_Click" Width="100" />
+        <Button Content="Cancel" x:Name="cancelButton" Click="cancelButton_Click" Width="98" />
+    </StackPanel>
+</Window>
+
+
