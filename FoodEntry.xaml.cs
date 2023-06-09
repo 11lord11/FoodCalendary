@@ -7,14 +7,14 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls.Primitives;
 using System.Xml.Serialization;
-using static FoodCalendar.ActionSelectionWindow;
 using static FoodCalendar.CalendarView;
 
 
 namespace FoodCalendar
 {
-    public partial class ActionSelectionWindow : Window
+    public partial class FoodEntryWindow : Window
     {
         [XmlRoot("Day")]
         public class DayViewModel
@@ -52,17 +52,11 @@ namespace FoodCalendar
         private readonly DayViewModel day;
 
 
-        public ActionSelectionWindow(DayViewModel day)
+        public FoodEntryWindow(DayViewModel day)
         {
             InitializeComponent();
             this.day = day;
            
-        }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-            
         }
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
@@ -79,8 +73,15 @@ namespace FoodCalendar
             {
                 day.SelectedAction = ActionType.Exercise;
             }
+            else
+            {
+                // Handle the case where none of the radio buttons are checked.
+                MessageBox.Show("Пожалуйста, выберите действие.");
+                return;
+            }
             this.DialogResult = true;
         }
+
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {

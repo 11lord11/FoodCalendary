@@ -1,4 +1,4 @@
-﻿<Window x:Class="FoodCalendar.MainWindow"
+﻿<Window x:Class="FoodCalendar.CalendarView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Calendar" Height="350" Width="525">

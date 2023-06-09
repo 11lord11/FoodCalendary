@@ -5,15 +5,15 @@
     <StackPanel>
         <TextBlock Text="Select an action for today:" Margin="10"/>
         <StackPanel Orientation="Horizontal">
-            <RadioButton Click="EatClick" x:Name="eatRadioButton" Content="Eat" Margin="10" />
+            <CheckBox x:Name="eatRadioButton" Content="Eat" Margin="10" />
             <Image Width="32" Height="32" Source="food.png"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <RadioButton Click="ButtonBase.Click" x:Name="drinkRadioButton" Content="Drink" Margin="10" />  
+            <CheckBox x:Name="drinkRadioButton" Content="Drink" Margin="10" />  
             <Image Width="32" Height="32" Source="Drink.png"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <RadioButton Click="ButtonBase.Click" x:Name="exerciseRadioButton" Content="Exercise" Margin="10" />
+            <RadioButton x:Name="exerciseRadioButton" Content="Exercise" Margin="10" />
             <Image Width="32" Height="32" Source="exercise.png"/>
         </StackPanel>
         <Button Content="Save" x:Name="saveButton" Click="saveButton_Click" Width="100" />
